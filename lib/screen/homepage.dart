@@ -4,8 +4,8 @@ import '../bloc/light_bloc.dart';
 import '../bloc/light_event.dart';
 import '../bloc/light_state.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
