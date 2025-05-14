@@ -25,14 +25,17 @@ class Homepage extends StatelessWidget {
                   color: state.isOn ? Colors.yellow : Colors.grey,
                 ),
                 SizedBox(height: 20),
-                Text(state.isOn ? 'Light is ON' : 'Light is OFF', style: TextStyle(fontSize: 20)),
+                Text(
+                  state.isOn ? 'Light is ON' : 'Light is OFF',
+                  style: TextStyle(fontSize: 20),
+                ),
                 SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
                     lightBloc.add(ToggleLightEvent());
                   },
                   child: Text('Toggle Light'),
-                )
+                ),
               ],
             );
           },
