@@ -27,23 +27,26 @@ class Homepage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-  decoration: BoxDecoration(
-    shape: BoxShape.circle,
-    boxShadow: [
-      BoxShadow(
-        color: state.isOn ? Colors.yellow.withValues(alpha:  0.2) : Colors.transparent,
-        blurRadius: 20,
-        spreadRadius: 5,
-        offset: Offset(0, 5),
-      ),
-    ],
-  ),
-  child: Icon(
-    state.isOn ? Icons.lightbulb : Icons.lightbulb_outline,
-    size: 150,
-    color: state.isOn ? Colors.yellow : Colors.grey,
-  ),
-),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color:
+                            state.isOn
+                                ? Colors.yellow.withValues(alpha: 0.2)
+                                : Colors.transparent,
+                        blurRadius: 20,
+                        spreadRadius: 5,
+                        offset: Offset(0, 5),
+                      ),
+                    ],
+                  ),
+                  child: Icon(
+                    state.isOn ? Icons.lightbulb : Icons.lightbulb_outline,
+                    size: 150,
+                    color: state.isOn ? Colors.yellow : Colors.grey,
+                  ),
+                ),
 
                 SizedBox(height: 20),
                 Text(
