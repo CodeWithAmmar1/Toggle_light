@@ -1,3 +1,3 @@
-abstract class  LightEvent {
-}
+abstract class LightEvent {}
+
 class ToggleLightEvent extends LightEvent {}
