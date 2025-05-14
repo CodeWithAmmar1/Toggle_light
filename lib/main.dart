@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => LightBloc(),
-      child: MaterialApp(home: SplashScreen()),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen()),
     );
   }
 }
