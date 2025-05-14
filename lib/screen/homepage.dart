@@ -12,9 +12,14 @@ class Homepage extends StatelessWidget {
     final lightBloc = BlocProvider.of<LightBloc>(context);
 
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.indigoAccent,
+      appBar: AppBar(
+        backgroundColor: Colors.indigoAccent,
         centerTitle: true,
-        title: Text('BLoC Light Switch',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)),
+        title: Text(
+          'BLoC Light Switch',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
       body: Center(
         child: BlocBuilder<LightBloc, LightState>(
           builder: (context, state) {
@@ -29,32 +34,31 @@ class Homepage extends StatelessWidget {
                 SizedBox(height: 20),
                 Text(
                   state.isOn ? 'Light is ON' : 'Light is OFF',
-                  style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 30),
-               ElevatedButton(
-  onPressed: () {
-    lightBloc.add(ToggleLightEvent());
-  },
-  style: ElevatedButton.styleFrom(
-    backgroundColor: Colors.indigoAccent,
-    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(30),
-    ),
-    elevation: 5,
-    shadowColor: Colors.indigoAccent.withValues(alpha:  0.5),
-  ),
-  child: Text(
-    'Toggle Light',
-    style: TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
-    ),
-  ),
-),
-
+                ElevatedButton(
+                  onPressed: () {
+                    lightBloc.add(ToggleLightEvent());
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.indigoAccent,
+                    padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    elevation: 5,
+                    shadowColor: Colors.indigoAccent.withValues(alpha: 0.5),
+                  ),
+                  child: Text(
+                    'Toggle Light',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ],
             );
           },
