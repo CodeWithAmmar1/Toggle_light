@@ -13,14 +13,19 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Homepage() ));
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => Homepage()),
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Splash Screen", style: TextStyle(fontSize: 24))),
+      body: Center(
+        child: Text("Splash Screen", style: TextStyle(fontSize: 24)),
+      ),
     );
   }
 }
