@@ -16,7 +16,7 @@ class Homepage extends StatelessWidget {
         backgroundColor: Colors.indigoAccent,
         centerTitle: true,
         title: Text(
-          'BLoC Light Switch',
+          'Light Switch',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
